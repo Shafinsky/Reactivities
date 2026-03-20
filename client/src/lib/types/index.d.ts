@@ -52,6 +52,15 @@ type LocationIQSuggestion = {
   address: LocationIQAddress
 }
 
+type ChatComment = {
+  id: string
+  createdAt: Date
+  body: string
+  userId: string
+  displayName: string
+  imageUrl?: string
+}
+
 type LocationIQAddress = {
   name: string
   house_number: string

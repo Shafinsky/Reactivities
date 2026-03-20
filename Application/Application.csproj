@@ -32,4 +32,8 @@
     <Folder Include="Profiles\DTOs\" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <NoWarn>NU1903</NoWarn>
+  </PropertyGroup>
+
 </Project>

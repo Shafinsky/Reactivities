@@ -18,6 +18,11 @@
   <ItemGroup>
     <Folder Include="DTOs\" />
     <Folder Include="Middleware\" />
+    <Folder Include="SignalR\" />
   </ItemGroup>
+
+  <PropertyGroup>
+      <NoWarn>NU1903</NoWarn>
+  </PropertyGroup>
 
 </Project>
