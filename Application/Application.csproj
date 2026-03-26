@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\Presistence\Presistence.csproj" />
+    <ProjectReference Include="..\Presistence\Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

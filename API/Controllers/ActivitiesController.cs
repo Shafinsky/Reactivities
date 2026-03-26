@@ -2,6 +2,8 @@ using System;
 using Application.Activities.Commands;
 using Application.Activities.DTOs;
 using Application.Activities.Queries;
+using Application.Core;
+using Application.Profiles.Queries;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -12,9 +14,10 @@ namespace API.Controllers;
 public class ActivitiesController : BaseApiController
 {
     [HttpGet]
-    public async Task<ActionResult<List<ActivityDto>>> GetActivities()
+    public async Task<ActionResult<PagedList<ActivityDto, DateTime?>>> GetActivities(
+        [FromQuery]ActivityParams activityParams)
     {
-        return await Mediator.Send(new GetActivityList.Query());
+        return HandleResult(await Mediator.Send(new GetActivityList.Query{Params = activityParams}));
     }
 
     [HttpGet("{id}")]
@@ -49,4 +52,5 @@ public class ActivitiesController : BaseApiController
     {
         return HandleResult(await Mediator.Send(new UpdateAttendance.Command { Id = id }));
     }
+
 }
