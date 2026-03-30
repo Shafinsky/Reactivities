@@ -2,7 +2,6 @@ import { Box, debounce, List, ListItemButton, TextField, Typography, type TextFi
 import { useEffect, useMemo, useState } from "react";
 import { useController } from "react-hook-form"
 import type { FieldValues, UseControllerProps } from "react-hook-form"
-import type { LocationIQSuggestion } from "../../../lib/types";
 import axios from "axios";
 
 type Props<T extends FieldValues> = {
