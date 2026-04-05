@@ -30,8 +30,8 @@ export default function VerifyEmail() {
                     <Box display='flex' flexDirection='column' gap={2} justifyContent='center'>
                         <Typography>Verification failed.  You can try resending the verify link to your email</Typography>
                         <Button
-                            onClick={() => resendConfirmationEmail.mutateAsync({userId})}
-                            loading={resendConfirmationEmail.isPending}
+                            onClick={() => resendConfirmationEmail.mutate({userId})}
+                            disabled={resendConfirmationEmail.isPending}
                         >
                             Resend verification email
                         </Button>
