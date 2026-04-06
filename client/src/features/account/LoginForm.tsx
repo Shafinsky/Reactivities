@@ -18,7 +18,7 @@ export default function LoginForm() {
         mode: 'onTouched',
         resolver: zodResolver(loginSchema)
     });
-    
+
     const email = watch('email');
 
     const handleResendEmail = async () => {
@@ -74,7 +74,7 @@ export default function LoginForm() {
                 Login
             </Button>
             {notVerified ? (
-                <Box display='flex' flexDirection='column' alignItems='center'>
+                <Box display='flex' flexDirection='column' justifyContent='center'>
                     <Typography textAlign='center' color='error'>
                         Your email has not been verified. You can click the button to re-send the verfication link.
                     </Typography>
@@ -96,3 +96,4 @@ export default function LoginForm() {
         </Paper>
     )
 }
+

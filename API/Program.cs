@@ -105,4 +105,6 @@ catch(Exception ex)
     logger.LogError(ex, "An error occurred during migration.");
 }
 
+Console.WriteLine("DB: " + builder.Configuration.GetConnectionString("DefaultConnection"));
+
 app.Run();
