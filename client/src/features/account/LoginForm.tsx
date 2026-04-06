@@ -96,3 +96,4 @@ export default function LoginForm() {
         </Paper>
     )
 }
+
